@@ -1,0 +1,20 @@
+<div class="slide">
+  <h1>Type-compatibiliteit</h1>
+  <p>Typescript maakt gebruik van <a href="https://en.wikipedia.org/wiki/Structural_type_system"><i>structural subtyping</i></a> (<i>static duck-typing</i>). Dit is anders dan we gewend zijn in Java (maar lijkt wel weer op hoe het werkt in Python). Het volgende is valide:</p>
+
+  <pre><code>  interface Named {
+    name: string;
+  }
+
+  class Person {
+    name: string;
+  }
+
+  let p: Named;
+  p = new Person();  // OK, because of structural typing</code></pre>
+
+<p>In <a href="https://en.wikipedia.org/wiki/Nominal_type_system"><i>nominally-typed talen</i></a> als C# of java zou dit niet kunnen, omdat <tt>Person</tt> geen subtype is van <tt>Named</tt>. In Typescript gaat dit wel goed, omdat de compilter ziet dat beide typen zich hetzelfde gedragen.</p>
+
+<p>Er is over dit onderwerp een heleboel meer te melden. Check <a href="http://www.typescriptlang.org/docs/handbook/type-compatibility.html">eventueel de documentatie</a>.</p>
+
+</div>

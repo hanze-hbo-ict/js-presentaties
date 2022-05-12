@@ -1,0 +1,26 @@
+<div class="slide">
+  <h1>Modules (4/4)</h1>
+
+  <p>Binnen een module kun je ook één default export member (functie of klasse) hebben. Een dergelijke export voorzie je van het sleutelwoord <tt>default</tt>:
+
+<pre><code>  // bestand DEMO1.ts
+  function foo() { ... }
+  export default foo</code></pre>
+<p>Je kunt dat sleutelwoord ook direct bij het betreffende member zetten:</p>
+<pre><code>  // bestand DEMO2.ts
+  // naam van de default klasse of de functie is optioneel
+  export default function () { ... } </code></pre>
+
+<p>Het import-statement is ietsje anders wanneer dit een default member betreft:</p>
+
+<pre><code>  import foo from './DEMO1'
+  import LokaleNaam from './DEMO2'</code></pre>
+
+
+
+
+
+
+
+
+</div>

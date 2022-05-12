@@ -1,0 +1,27 @@
+<div class="slide">
+  <h1>Test</h1>
+  <p>Wat gebeurt er in het onderstaande voorbeeld?</p>
+  <pre><code>  var w = 1, z = 2
+
+  function foo(x = w + 1, y = x + 1, z = z + 1) {
+    console.log(x, y, z)
+  }
+  foo()</code></pre>
+
+  <p class="test_antwoord">klik hier voor het antwoord</p>
+  <p class="antwoord">Er wordt een <tt>ReferenceError: z is not defined</tt> error geworpen.</br>
+De <tt>w</tt> in <tt>w+1</tt> zoekt een <tt>w</tt> in de parameter (formele) scope. Omdat die er niet is, zoekt hij hem in de globale scope, waar -ie te vinden is. Vervolgens wordt er voor de <tt>y</tt> een <tt>x</tt> gezocht in de formele scope: die is net geïnitialiseerd, dus dat gaat ook goed.<br/>
+Voor <tt>z+1</tt> wordt er echter ook gezocht binnen de formele scope. Daar wordt -ie wel gevonden, maar in een nog-niet-geïnitialiseerde status. Er wordt dus nooit gezocht in de globale scope.<br/>
+Dit staat bekend als een <a href="https://stackoverflow.com/a/33198850" target="_blank"><em>Temporal Dead Zone (TDZ) error</a></em>.
+</br/>
+  </p>
+
+</div>
+
+<script type="text/javascript">
+$("p.test_antwoord").on('click', e => {
+  $("p.antwoord").css({'visibility':'visible'})
+  $(e.target).css({'visibility':'hidden'})
+  e.stopPropagation()
+})
+</script>

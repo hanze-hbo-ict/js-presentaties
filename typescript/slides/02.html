@@ -1,0 +1,18 @@
+<div class="slide">
+  <h1>Interfaces</h1>
+  <p>Natuurlijk kun je geen strikte taal hebben zonder interfaces. Op deze manier kun je je eigen data-typen definiëren en gebruiken.</p>
+  <pre><code>  interface Adres {
+    straatnaam:string
+    huisnummer:number
+    woonplaats:string
+  }
+
+  let data:Adres[]
+
+  function demo(a:Adres) { ... }
+  </code></pre>
+
+  <p>Ook functies hebben een return-type:</p>
+  <pre><code>  function getAdres(id:number):Adres { ... } </code></pre>
+
+</div>

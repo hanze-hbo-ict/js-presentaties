@@ -1,0 +1,10 @@
+<div class="slide">
+  <h1>De <tt>...</tt>-operator: spread en <em>rest</em></h1>
+  <p>Anderzijds kunnen we <tt>...</tt> ook gebruiken in de signature van een functie, waarmee we aangeven dat we de <em>rest</em> van de argumenten willen samenrapen (<em>gather</em>).</p>
+
+  <pre><code>    function foo(a, b, ...z) {
+      console.log(a, b, z)
+    }
+    foo(1, 2, 3, 4, 5); // 1 2 [3, 4, 5] </code></pre>
+
+  <p class="note">Dit is een verbetering ten opzichte van de (deprecated) <tt>arguments</tt>-array.</p>

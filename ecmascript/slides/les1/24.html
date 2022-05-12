@@ -1,0 +1,19 @@
+<div class="slide">
+  <h1>Promises</h1>
+  <p>Promises zijn vergelijkbaar met <tt>callback-functions</tt> of met <tt>event-listeners</tt>. Ze vormen een intermediair tussen de <tt>caller</tt> en de <em>async</em> uitgevoerde code. Je kunt het ook zien als een <em>future value</em>.</p>
+
+  <p>Een <tt>Promise</tt> wordt altijd maar één keer uitgevoerd (<em>resolved</em>), en de de uitkomst hiervan is altijd ofwel <tt>fullfilled</tt> ofwel <tt>rejected</tt>. </p>
+
+  <p>Het maken van een <tt>Promise</tt> is behoordelijk elementair:</p>
+
+  <pre><code>var prom = new Promise (function (resolve, reject) {
+  if (alles_ok) resolve (return_value)
+  else reject (error)
+})
+
+prom
+  .then( return_value => function )
+  .catch( error => function )</code></pre>
+
+<p>Zie verder ook <a href="demo/PromiseDemo.txt" target="_blank">deze demo</a>.</p>
+</div>

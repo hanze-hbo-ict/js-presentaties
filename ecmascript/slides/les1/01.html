@@ -1,0 +1,20 @@
+
+  <div class="slide">
+    <h1><tt>let</tt> en <tt>var</tt>(1/2)</h1>
+
+    <p>EcmaScript kent twee soorten variabele-definities: <tt>let</tt> en <tt>var</tt>. Het grote verschil zit hem in de scoping.</p>
+
+    <pre><code>    var foo = "hallo"
+    for (let i=0; i&lt;10; i++){
+      console.log(foo)
+    }
+    console.log(i); // reference error: i is not defined    </code></pre>
+
+    <p>Terwijl</p>
+
+      <pre><code>    var foo = "hallo"
+    for (var i=0; i&lt;10; i++){
+      console.log(foo)
+    }
+    console.log(i); // 10</code></pre>
+  </div>

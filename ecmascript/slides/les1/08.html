@@ -1,0 +1,15 @@
+<div class="slide">
+  <h1>Functies als default parameters</h1>
+  <p>Hoewel het niet aan te raden is, kun je zelfs inline functie-aanroep gebruiken als standaardwaarde voor een parameter (een zogenaamde <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression" target="_blank">Immediately-invoked Function Expression, <tt>IIFE</tt></a>):</p>
+
+  <pre><code>  function foo( x = (function(v){ return v + 11; })(31) ) {
+    console.log(x)
+  }
+  foo(); // 42</code></pre>
+
+<p>Iets vergelijkbaars kan nuttig zijn als je een <em>no-op</em> functie als default callback wilt hebben: </p>
+
+<pre><code>  function ajax(url, cb=function(){}) {
+    //
+  }</code></pre>
+</div>

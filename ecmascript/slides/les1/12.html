@@ -1,0 +1,25 @@
+<div class="slide">
+  <h1>Test</h1>
+  <p>Wat is de waarde van <tt>foo</tt> na de onderstaande code?</p>
+
+<pre><code>{
+  let aa = 10, bb = 20
+  let obj = { x:aa, y:bb }
+  let { y:foo, x:bar} = obj
+}</code></pre>
+
+<p class="test_antwoord">klik hier voor het antwoord</p>
+
+<p class="antwoord">Het juiste antwoord is <tt>20</tt>.<br/>
+Er worden eerst twee variabelen aangemaakt, waarvan de waarde in het object <tt>obj</tt>  worden opgeslagen, met <tt>key</tt>s <tt>x</tt> en <tt>y</tt>. Daarna wordt dat object gedeconstrueerd en worden die properties aan de nieuwe variabelen <tt>foo</tt> en <tt>bar</tt> toegekend.<br/>
+Let op de volgorde <tt>source → target</tt>; <tt>source</tt> is hier <tt>obj.y</tt> en <tt>target</tt> is hier <tt>foo</tt>.
+</p>
+</div>
+
+<script type="text/javascript">
+$("p.test_antwoord").on('click', e => {
+  $("p.antwoord").css({'visibility':'visible'})
+  $(e.target).css({'visibility':'hidden'})
+  e.stopPropagation()
+})
+</script>

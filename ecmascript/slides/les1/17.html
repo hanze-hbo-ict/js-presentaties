@@ -1,0 +1,12 @@
+<div class="slide">
+  <h1>Arrow functions (3/4)</h1>
+  <p>Arrow-functies zijn <em>altijd</em> functie-<em>expressies</em>; er bestaat geen arrow-functie <em>declaratie</em>. Het zijn <em>anonieme</em> expressies – er is geen expliciete referentie die je kunt gebruiken voor <em>event-binding</em> of recursie.</p>
+
+  <p>Ze verschillen ook van Immediately-invoked function expressions (<a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression">IIFE</a>) omdat deze laatste direct <em>uitgevoerd</em> worden.</p>
+
+  <pre><code>(function foo() { console.log('dit wordt uitgevoerd') })();
+() => console.log('dit wordt NIET uitgevoerd');
+( () => console.log('dit wordt dan weer WEL uitgevoerd') )()</code></pre>
+
+<p class="note">Om deze voorbeelden te laten werken is het noodzakelijk dat de functie-definities dit keer <em>wel</em> met een puntkomma wordt afgesloten. Het voert te ver om dit toe toe lichten; het heeft te maken met <em></em>intermediate values</em> binnen IIFE.</p>
+</div>

@@ -1,0 +1,19 @@
+<div class="slide">
+  <h1>Default parameter waarden</h1>
+  <p>Net als in php en Python kun je in JavaScript standaardwaarden voor parameters meegeven in de signature van de functie:</p>
+  <pre><code>  function foo(x=11, y=31){
+    return (x + y)
+  }
+  console.log( foo() );       // 42
+  console.log( foo(2) );      // 33
+  console.log( foo(20, 30) ); // 50 </code></pre>
+<p>Omdat functies in JavaScipt <em>first class citizens</em> zijn, kun je deze ook gebruiken als standaardwaarde voor een parameter:</p>
+
+<pre><code>  function bar(x=3, y=foo(5)) {
+    console.log( x * y );
+  }
+  bar();     // 108
+  bar(3, 4); // 12
+</code></pre>
+
+</div>

@@ -1,0 +1,20 @@
+<div class="slide">
+  <h1>for ... of loops</h1>
+  <p>Behalve <tt>for</tt> en <tt>for...in</tt> heb je ook <tt>for ... of</tt>. Dit <em>loopt</em> over een <em>itarable</em> set van waarden:</p>
+
+<pre><code>var a = ["a", "b", "c", "d"]
+for (var idx in a) { console.log(idx) } // 0, 1, 2, 3: 'normale' iteratie
+for (var val of a) { console.log(val) } // 'a', 'b', 'c', 'd'
+</code></pre>
+
+<p>Op de achtergrond werkt <tt>for ... of</tt> met een <em>iterator</em> die herhaaldelijk wordt opgeroepen om de nieuwe waarde te produceren.</p>
+
+<p>In EcmaScript zijn de volgende typen standaard iterable:</p>
+<ul>
+  <li>Arrays</li>
+  <li>Strings</li>
+  <li>Generators</li>
+  <li>Collections</li>
+</ul>
+
+</div>

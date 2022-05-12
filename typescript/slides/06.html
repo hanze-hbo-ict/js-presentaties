@@ -1,0 +1,26 @@
+<div class="slide">
+  <h1>Modules (2/4)</h1>
+
+  <p>Je kunt bijvoorbeeld een klasse als volgt exporteren:</p>
+
+  <pre><code>const numberRegexp = /^[0-9]{4}[A-Za-z]{2}$/
+
+export class PostcodeChecker {
+  isAcceptable(s: string) {
+    s = s.replace(/\s/g, '')
+    return s.length === 6 && numberRegexp.test(s)
+  }
+}
+</code></pre>
+
+
+<p>Je kunt deze geëxporeerde module dan als volgt gebruiken:</p>
+
+<pre><code>import { PostcodeChecker}  from './PostcodeChecker'
+
+let check = new PostcodeChecker()
+console.log(check.isAcceptable('1234AA')) //true
+console.log(check.isAcceptable('123123')) //false
+</code></pre>
+
+</div>

@@ -1,0 +1,16 @@
+<div class="slide">
+  <h1>Destructuring objects (1/2)</h1>
+  <p>We kunnen dezelfde constructie gebruiken wanneer een functie een object teruggeeft. In dat geval kunnen we gebruik maken van de <em>key-value pairs</em> uit dat object:</p>
+
+  <pre><code>function foo() {
+  return { x:4, y:5, z:6 }
+}
+
+let { x:x, y:y, z:z } = foo()
+console.log(y); // 5</code></pre>
+
+<p>Als de naam van de variabele hetzelfde is als de property van het object, kun je ook de kortere syntax gebruiken:</p>
+
+<pre><code>let { x, y, z } = foo()
+console.log(z); // 6</code></pre>
+</div>

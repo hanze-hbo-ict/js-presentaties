@@ -1,0 +1,22 @@
+<div class="slide">
+  <h1>Generators (3/4)</h1>
+  <p>Een <tt>yield</tt> is niet zomaar een return-statement; de gepauzeerde generator kan dit moment ook gebruiken om een waarde te ontvangen van de client. Het is een moment waarop deze beide met elkaar kunnen communiceren:</p>
+
+  <pre><code>function *foo() {
+  var x = yield 10
+  console.log(x) //314
+}
+
+let f = foo()
+console.log(f.next())
+console.log(f.next(314))
+
+/* OUTPUT:
+{ value: 10, done: false }
+314
+{ value: undefined, done: true }
+*/
+
+</code></pre>
+
+</div>

@@ -1,0 +1,18 @@
+<div class="slide">
+  <h1><tt>const</tt></h1>
+  <p>Een <tt>const</tt> is een block-scoped variabele waarvan je de waarde niet meer kunt veranderen wanneer je hem hebt geïnitialiseerd.</p>
+
+  <pre><code>{
+  const a = 2
+  console.log(a)
+  a = 3; // TypeError: Assignment to constant variable.
+}</code></pre>
+<p>De restrictie is op de <em>assignment</em>, niet op de <em>waarde</em> van de variabele:</p>
+
+<pre><code>{
+  const a = [1,2,3]
+  a.push(4)
+  console.log(a); // [1 ,2, 3, 4]
+  a = 3; // TypeError: Assignment to constant variable.
+}</code></pre>
+</div>

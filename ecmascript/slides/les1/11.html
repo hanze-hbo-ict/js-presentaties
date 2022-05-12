@@ -1,0 +1,16 @@
+<div class="slide">
+  <h1>Destructuring objects (2/2)</h1>
+  <p>Het is van belang op te merken dat wanneer we <tt>x:x</tt> vervangen door <tt>x</tt>, het <tt>x:</tt> gedeelte wordt weglaten. Soms wil je een property van een object in de huidige scope een andere naam geven:</p>
+
+<pre><code>let { x:baz, y:bam, z:baz } = foo();
+console.log(bam); // 4
+console.log(x);   // reference error</code></pre>
+
+<p>De normale vorm <tt>target=source</tt> wordt bij destructuring omgedraaid. Bij <tt>x:bam</tt> is <tt>x</tt> de source (dat wat uit de functie komt) en <tt>bam</tt> is de target (datgene wat de waarde opvangt).</p>
+
+<p>Object literals: <tt>target ← source</tt><br/>
+Object destructuring: <tt>source → target</tt>
+</p>
+
+
+</div>

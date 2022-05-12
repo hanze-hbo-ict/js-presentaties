@@ -1,0 +1,15 @@
+<div class="slide">
+  <h1>De <tt>...</tt>-operator: <em>spread</em> en rest</h1>
+  <p>De exacte naam van de <tt>...</tt>-operator is afhankelijk van waar en hoe deze wordt ingezet.</p>
+
+  <pre><code>    function foo(x,y,z) {
+      console.log(x,y,z);
+    }
+    foo (...[1,2,3]); // 1 2 3  </code></pre>
+
+  <p>De <tt>...</tt> in de functie-aanroep zorgt ervoor dat de array wordt <em>uitgespreid</em> naar de individuele waarden. Dit kan in allerlei contexten:</p>
+
+  <pre><code>    var a = [2,3,4]
+    var b = [1, ...a, 5]; // [1, 2, 3, 4, 5]  </code></pre>
+
+</div>

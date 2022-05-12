@@ -1,0 +1,19 @@
+<div class="slide">
+  <h1><tt>let</tt> en <tt>var</tt> (2/2)</h1>
+
+  <p><tt>var</tt>'s worden <em>gehoist</em>, <tt>let</tt>'s niet:
+
+  <pre><code>{
+      console.log(a); // undefined
+      console.log(b); // Reference Error
+
+      var a;
+      let b;
+}</pre></code>
+<p class="note">Vanzelfsprekend blijft er een verschil tussen <em>initialisatie</em> en <em>declaratie</em>.</p>
+<pre><code>{
+  console.log(b); // undefined, maar niet Reference Error
+  var b
+  b = "hallo"
+}</code></pre>
+</div>

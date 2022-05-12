@@ -1,0 +1,54 @@
+var _ = require('lodash/core');
+
+/*
+  literatuur:
+  https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/
+  https://medium.com/@nickbalestra/javascripts-lexical-scope-hoisting-and-closures-without-mystery-c2324681d4be
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+  algemeen
+  https://frontendmasters.com/courses/javascript-foundations/
+*/
+var firstMethod = {
+  data: [],
+
+  addAll: function(pieces) {
+    // De scope van 'this' is in deze context het object firstMethod
+    // als we dat object willen meenemen naar de functie hier beneden,
+    // moeten we die opvangen in een lokale variabele. Die noemen we
+    // for obvious reasons 'self', maar we hadden hem ook anders kunnen noemen.
+
+    var self = this
+    _.each(pieces, function(p) {
+      // binnen deze anonieme functie is de 'this' van het enclosing object niet
+      // gedefinieerd; daarom hebben we de lokale variabele self nodig.
+      self.data.push(p)
+    })
+  },
+
+  getAll: function() {
+    return this.data;
+  },
+  // let op de 'trainling commma' hierboven. Zie de onderstaande link voor meer info:
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas
+}
+
+
+var secondMethod = {
+  data: [],
+
+  addAll (pieces) {
+    _.each( pieces, p => this.data.push(p) )
+  },
+
+  getAll() { return this.data }
+}
+
+
+firstMethod.addAll([1,2,3,4])
+secondMethod.addAll([1,2,3,4])
+console.log(firstMethod.getAll()) //  [ 1, 2, 3, 4 ]
+console.log(secondMethod.getAll()) // [ 1, 2, 3, 4 ]
+
+// De output is hetzelfde, maar de methode waarop dit wordt bewerkstelligd is wel verschillend.
+

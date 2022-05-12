@@ -1,0 +1,17 @@
+<div class="slide">
+  <h1>Generators (1/4)</h1>
+  <p>In EcmaScript kun je gebruik maken van <em>generators</em>: een functie waarvan de executie op een bepaald moment kan worden 'gepauzeerd' om op een later moment weer verder te gaan. Een dergelijke pauze kan gebruikt worden om comunicatie tussen de <em>caller</em> en de functie zelf op te zetten.</p>
+
+  <p>We geven een generator aan door middel van een asterisk (<tt>*</tt>):</p>
+
+  <pre><code>function *foo() {
+  // generator body
+}</code></pre>
+
+  <p>Het aanroepen van een generator gaat op een normale manier; maar de functie wordt op dat moment niet uitgevoerd, maar er wordt een <em>iterator</em> aangemaakt die de executie van die generator controlleerd:</p>
+  <pre><code>function *foo(x, y) {  console.log(x, y) }
+
+foo() // geen output; f kunnen we nu gebruiken als iterator
+  </code></pre>
+
+</div>

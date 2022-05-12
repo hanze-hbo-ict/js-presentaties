@@ -1,0 +1,17 @@
+<div class="slide">
+  <h1>Generators (4/4)</h1>
+  <p>Een <tt>yield</tt> statement is geen operator, hoewel hij er wel op lijkt. Hij heeft dezelfde <em>expression presendence </em> als een assigment, wat inhoudt dat <tt>yield</tt> legaal is overal waar bijvoorbeeld <tt>a = 3</tt> legaal is:</p>
+
+  <pre><code>function *foo() {
+  var arr = [ yield 11, yield 13, yield 17]
+  yield arr
+}
+
+var f = foo()
+
+console.log(f.next().value)    // 11
+console.log(f.next(314).value) // 13
+console.log(f.next(218).value) // 17
+console.log(f.next(42).value)  // [ 314, 218, 42 ]
+</code></pre>
+</div>

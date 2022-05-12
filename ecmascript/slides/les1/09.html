@@ -1,0 +1,19 @@
+<div class="slide">
+  <h1>Destructuring arrays</h1>
+  <p>Als een functie een array teruggeeft, gebruiken we in de regel een tmp-variabele om de waarden eruit te halen:</p>
+  <pre><code>function foo() {
+  return [3.14, 2.18, 42]
+}
+
+let tmp=foo();
+a = tmp[0], b = tmp[1], c = tmp[2];</code></pre>
+
+<p>In de nieuwe versie van JavaScript kun je hiervoor <em>array</em> en <em>object destructuring</em> gebruiken:</p>
+
+<pre><code>let [a, b, c] = foo();
+
+console.log(b); // 2.18
+console.log(a); // 3.14</code></pre>
+
+
+</div>

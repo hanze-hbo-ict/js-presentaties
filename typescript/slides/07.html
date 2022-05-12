@@ -1,0 +1,26 @@
+<div class="slide">
+  <h1>Modules (3/4)</h1>
+
+  <p>In een module kun je ook meerdere klassen of functies exporteren. Daarvoor kun je verschillende syntaxen gebuiken. Allereerst de meest standaard JavaScript-versie:</p>
+
+  <pre><code>  function foo() { ... }
+  function bar() { ... }
+
+  module.exports = { foo, bar }</code></pre>
+
+  <p>In Typescript heb je behalve deze ook een wat meer verboze (en wat meer schaalbare) manier om hetzelfde te bereiken:</p>
+
+  <pre><code>  function foo() { ... }
+  function bar() { ... }
+
+  export { foo, bar as BetereNaam }  </code></pre>
+
+  <p>Het importeren van meerdere functies of klassen gaat in alle gevallen op dezelfde manier:</p>
+
+  <pre><code>  import { foo as LokaleNaam, BetereNaam } from './bestandsnaam'  // optie 1
+  import { * } from './bestandsnaam' // optie 2  </code></pre>
+
+
+
+
+</div>

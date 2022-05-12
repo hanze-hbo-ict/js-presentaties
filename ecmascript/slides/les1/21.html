@@ -1,0 +1,19 @@
+<div class="slide">
+  <h1>Generators (2/4)</h1>
+
+  <p>Een generator geeft een waarde terug en pauzeert dan de executie totdat door de client een volgende waarde wordt gevraagd. Hiervoor is het sleutelwoord <tt>yield</tt>.</p>
+<p>Een <tt>yield</tt> geeft een object terug met een waarde en de property <tt>done</tt>; aan de hand van deze property kun je checken of de generator is 'uitgeyield':</p>
+
+<pre><code>function *foo(){
+  yield 20
+  yield 30
+}
+
+let f = foo()
+console.log(f.next()) // { value: 20, done: false }
+console.log(f.next()) // { value: 30, done: false }
+console.log(f.next()) // { value: undefined, done: true }
+</code></pre>
+
+
+</div>

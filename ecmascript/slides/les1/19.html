@@ -1,0 +1,27 @@
+<div class="slide">
+  <h1>Test</h1>
+  <p>Wat is het resultaat van onderstaande code?</p>
+  <pre><code>var _ = require('lodash/core')
+
+var foo = (...v) => {
+  let bar = 0
+  _.each(v, p => bar += p**2)
+  return bar
+}
+
+console.log(foo(1,2,3,4))</code></pre>
+
+<p class="test_antwoord">klik hier voor het antwoord</p>
+<p class="antwoord">
+  Het antwood is <tt>30</tt>.<br/>
+  Er worden vier parameters naar de functie <tt>gestuurd</tt>, die door <tt>...</tt> in een array worden opgevangen (<em>gather</em>). In arrow-functie wordt hier overheen geïtereeerd en het kwadraat van elk cijfer opgeteld bij het totaal. Dus <tt>1 + 4 + 9 + 16</tt> wat gelijk is aan <tt>30</tt>.  
+</p>
+</div>
+
+<script type="text/javascript">
+$("p.test_antwoord").on('click', e => {
+  $("p.antwoord").css({'visibility':'visible'})
+  $(e.target).css({'visibility':'hidden'})
+  e.stopPropagation()
+})
+</script>

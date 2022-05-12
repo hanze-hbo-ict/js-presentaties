@@ -1,0 +1,16 @@
+<div class="slide">
+  <h1>Arrow functions (4/4)</h1>
+  <p>Het gaat er bij arrow-functies niet om minder te typen. De belangrijkste reden voor de toevoeging van deze functionaliteit aan de taal heeft te maken met <em>binding</em>.</p>
+  <pre><code>var foo = {
+  handleRequest: function() {
+    var self = this;
+    btn.addEventListener('click', function(){
+      self.handleRequest();
+    })
+  }
+}</code></pre>
+  <p>De <em>hack</em> hierboven <tt>self=this</tt> wordt gebruikt om het object waarin de functie <tt>handleRequest</tt> gedefinieerd is over te brengen naar de scope van de anonieme functie van <tt>addEventListener</tt>.</p>
+
+  <p>Zie verder <a href="demo/this.txt" target="_blank">dit voorbeeld</a>.</p>
+
+</div>

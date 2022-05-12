@@ -1,0 +1,22 @@
+<div class="slide">
+  <h1>Classes</h1>
+  <p>Javascript is een <a href="https://en.wikipedia.org/wiki/Prototype-based_programming">prototype-based language</a>, maar veel programmeurs zijn gewend aan object georiënteerd werken. Daarom ondersteunt <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">de nieuwe spec</a> klasses zoals we dat gewend zijn: </p>
+
+  <pre><code>class AwesomeClass {
+    salutation:string
+
+    constructor(naam:string) {
+        this.salutation = naam
+    }
+
+    greet() {
+        return "Hello, " + this.greeting
+    }
+}
+
+let demo = new AwesomeClass("Henk");</code></pre>
+
+<p>Je ziet dat het sleutelwoord <i>constructor</i> wordt gebruikt, in plaats van de klasse-naam (zoals in Java). Verder <i>moet</i> je in Typescript de velden voorzien van <tt>this</tt> (wat in Java optioneel is).</p>
+<p>Let op: classes worden in EcmaScript niet <i>gehoist</i>, zoals functies en (sommige) variabelen.</p>
+
+</div>

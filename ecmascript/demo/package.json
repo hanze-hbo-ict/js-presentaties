@@ -1,0 +1,14 @@
+{
+  "name": "Demo-directory",
+  "version": "1.0.0",
+  "description": "Een directory met wat js-voorbeelden voor thema 2.4",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Bart Barnard",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {}
+}
